@@ -1,0 +1,37 @@
+
+### cups.service
+Not installed; skipped
+
+### avahi-daemon.service
+Not installed; skipped
+
+### ModemManager.service
+Not installed; skipped
+
+### bluetooth.service
+Not installed; skipped
+
+### apport.service
+apport.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable apport
+
+### popularity-contest.service
+Not installed; skipped
+Removed /etc/systemd/system/sysinit.target.wants/multipathd.service.
+Removed /etc/systemd/system/multipath-tools.service.
+Removed /etc/systemd/system/sockets.target.wants/multipathd.socket.
+
+### Verification
+active
+apport.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install is-enabled apport
+disabled
+inactive
+disabled
+inactive
+disabled
+active
+active
+active
+active
+active

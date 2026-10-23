@@ -1,0 +1,9 @@
+Service          Startup  Current   Notes
+lxd.activate     enabled  inactive  -
+lxd.daemon       enabled  inactive  socket-activated
+lxd.user-daemon  enabled  inactive  socket-activated
+○ snap.lxd.daemon.service - Service for snap application lxd.daemon
+     Loaded: loaded (/etc/systemd/system/snap.lxd.daemon.service; static)
+     Active: inactive (dead)
+TriggeredBy: ● snap.lxd.daemon.unix.socket
+/var/snap/lxd/common/lxd
