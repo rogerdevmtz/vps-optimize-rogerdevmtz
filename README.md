@@ -23,7 +23,7 @@ La mejora observada es de unos 25 MiB disponibles; son mediciones puntuales, no 
 - cups, avahi-daemon, ModemManager, bluetooth y popularity-contest no estaban instalados; se documentaron y omitieron.
 - Snap conservado porque LXD está instalado; no se asumió que se pudiera retirar su infraestructura.
 - Actualizaciones automáticas de seguridad conservadas. SSH, red, DNS, logs, cron y agente del proveedor permanecen activos.
-- No se realizó el reinicio opcional. Se comprobó una conexión SSH nueva después de optimizar.
+- Reinicio opcional completado. Boot ID distinto y nueva conexión SSH comprobados; sistema running, sin unidades fallidas, DNS operativo y servicios esenciales activos. Multipath permanece disabled/inactive; apport inactive/dead.
 
 ## Evidencia
 
@@ -41,3 +41,25 @@ Se siguió la lección del curso: https://github.com/4GeeksAcademy/ai-engineerin
 
 Si se necesita multipath posteriormente: `sudo systemctl enable --now multipathd.socket multipathd.service`.
 Para volver a habilitar apport: `sudo systemctl enable --now apport.service`.
+
+## Verificación después del reinicio
+
+El informe principal `resources-after.txt` contiene la medición más reciente tras reiniciar: RAM total 957 MiB, usada 141 MiB, disponible 675 MiB; disco raíz 25G total, 23G disponibles. La tabla anterior corresponde a la medición inmediatamente después de optimizar, conservada en `resources-after-optimization.txt`. Los cambios entre mediciones también dependen del arranque, cachés y servicios transitorios.
+
+`boot-before.txt` y `reboot-verification.txt` registran identificadores de arranque diferentes y la reconexión SSH. Sistema `running`, cero unidades fallidas, DNS resuelve archive.ubuntu.com, SSH/red/logs/cron/actualizaciones/Snap activos. Multipath y su socket permanecen disabled/inactive. Apport queda inactive/dead tras arrancar; su unit generada no equivale a enabled.
+
+## Correspondencia con la rúbrica
+
+| Requisito | Evidencia |
+|---|---|
+| Credenciales del VPS del curso y acceso SSH real | resources-before.txt, ssh-verification.txt, reboot-verification.txt |
+| Prompt remoto, hostname y usuario | Los mismos archivos, hostname bc-vps-465 y usuario root |
+| Inventario previo: SO, RAM, disco y servicios | resources-before.txt |
+| Aplicación de la guía y decisiones seguras | optimization-log.txt, dependency-check.txt y decisiones del README |
+| SSH funcional después de optimizar y reiniciar | ssh-verification.txt, reboot-verification.txt |
+| Reinicio y persistencia de servicios desactivados | boot-before.txt, reboot-verification.txt |
+| TXT con salida real posterior de free -h y df -h, SO y aviso de VPS listo | resources-after.txt |
+| Repositorio accesible al instructor | https://github.com/rogerdevmtz/vps-optimize-rogerdevmtz |
+| Sin credenciales, claves privadas ni tokens | Solo se publican mediciones y estados de servicios; archivos revisados |
+
+Todos los requisitos obligatorios y el reinicio opcional están cubiertos. El informe declara disponibilidad del VPS como base de despliegue; no certifica una aplicación que todavía no se ha instalado.

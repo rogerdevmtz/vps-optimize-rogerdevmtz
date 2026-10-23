@@ -1,0 +1,56 @@
+2026-10-23T10:31:26+00:00
+bc-vps-465
+root
+ 10:31:26 up 0 min,  1 user,  load average: 0.34, 0.13, 0.04
+BOOT_ID=8fdc98e2-4b54-46e1-a169-a107b2e17383
+BOOT_BEFORE
+2026-10-23T10:30:22+00:00
+e97914b3-52cf-4c69-964d-153b891000c5
+ 10:30:22 up 7 min,  1 user,  load average: 0.00, 0.08, 0.07
+
+SSH session after reboot: PASS
+
+SYSTEM
+running
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+0 loaded units listed.
+
+ESSENTIAL SERVICES
+active
+active
+active
+active
+active
+active
+active
+active
+
+OPTIMIZED SERVICES
+MainPID=0
+Id=multipathd.service
+ActiveState=inactive
+SubState=dead
+UnitFileState=disabled
+Id=multipathd.socket
+ActiveState=inactive
+SubState=dead
+UnitFileState=disabled
+MainPID=0
+Id=apport.service
+ActiveState=inactive
+SubState=dead
+UnitFileState=generated
+
+DNS
+2a06:bc80:10:1000::398 archive.ubuntu.com
+2620:2d:4000:1::102 archive.ubuntu.com
+2620:2d:4000:1::101 archive.ubuntu.com
+2620:2d:4002:1::103 archive.ubuntu.com
+2a06:bc80:10:1000::35c archive.ubuntu.com
+2a06:bc80:10:1000::216 archive.ubuntu.com
+2a06:bc80:0:1000::18 archive.ubuntu.com
+2a06:bc80:0:1000::17 archive.ubuntu.com
+2a06:bc80:0:1000::16 archive.ubuntu.com
+2620:2d:4002:1::101 archive.ubuntu.com
+2620:2d:4000:1::103 archive.ubuntu.com
+2620:2d:4002:1::102 archive.ubuntu.com

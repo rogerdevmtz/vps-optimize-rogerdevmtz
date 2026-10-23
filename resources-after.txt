@@ -1,4 +1,4 @@
-2026-10-23T10:26:21+00:00
+2026-10-23T10:31:26+00:00
 bc-vps-465
 root
 PRETTY_NAME="Ubuntu 22.04.5 LTS"
@@ -14,27 +14,25 @@ BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
 PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
 UBUNTU_CODENAME=jammy
                total        used        free      shared  buff/cache   available
-Mem:           957Mi       158Mi       183Mi       3.0Mi       614Mi       653Mi
+Mem:           957Mi       141Mi       608Mi       3.0Mi       207Mi       675Mi
 Swap:             0B          0B          0B
                total        used        free      shared  buff/cache   available
-Mem:      1003823104   166514688   192847872     4186112   644460544   684978176
+Mem:      1003823104   147849216   637997056     4161536   217976832   708038656
 Swap:              0           0           0
 Filesystem      Size  Used Avail Use% Mounted on
-tmpfs            96M 1008K   95M   2% /run
+tmpfs            96M  988K   95M   2% /run
 /dev/vda1        25G  1.9G   23G   8% /
 tmpfs           479M     0  479M   0% /dev/shm
 tmpfs           5.0M     0  5.0M   0% /run/lock
 /dev/vda15      105M  6.1M   99M   6% /boot/efi
 tmpfs            96M  4.0K   96M   1% /run/user/0
- 10:26:21 up 3 min,  1 user,  load average: 0.20, 0.20, 0.09
+ 10:31:26 up 0 min,  1 user,  load average: 0.34, 0.13, 0.04
   UNIT                        LOAD   ACTIVE SUB     DESCRIPTION
   cron.service                loaded active running Regular background program processing daemon
   dbus.service                loaded active running D-Bus System Message Bus
   droplet-agent.service       loaded active running The DigitalOcean Droplet Agent
   getty@tty1.service          loaded active running Getty on tty1
   networkd-dispatcher.service loaded active running Dispatcher daemon for systemd-networkd
-  packagekit.service          loaded active running PackageKit Daemon
-  polkit.service              loaded active running Authorization Manager
   rsyslog.service             loaded active running System Logging Service
   serial-getty@ttyS0.service  loaded active running Serial Getty on ttyS0
   snapd.service               loaded active running Snap Daemon
@@ -51,8 +49,6 @@ tmpfs            96M  4.0K   96M   1% /run/user/0
 LOAD   = Reflects whether the unit definition was properly loaded.
 ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
 SUB    = The low-level unit activation state, values depend on unit type.
-19 loaded units listed.
+17 loaded units listed.
 
-VPS preparado para los proximos despliegues de la compania: SSH reconectado y recursos auditados. No se ha desplegado ni probado una aplicacion.
-RAM disponible antes: 628 MiB; despues: 653 MiB (aprox. +25 MiB, mediciones puntuales). Disco raiz: 25G total, 23G disponibles.
-Decisiones: Snap/LXD conservado por dependencia instalada; actualizaciones de seguridad conservadas; multipath sin rutas configuradas desactivado junto a su socket; apport deshabilitado; servicios de escritorio ausentes. Reinicio opcional no realizado.
+VPS listo como base para los proximos despliegues de la compania. Reinicio y reconexion SSH completados; red, DNS y servicios esenciales verificados. No se ha desplegado ni validado una aplicacion.
